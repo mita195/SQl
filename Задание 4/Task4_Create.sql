@@ -1,0 +1,24 @@
+
+CREATE TABLE City
+(
+	ID_City		  INTEGER  NOT NULL Primary Key Identity(1,1) ,
+	CC_FIPS		  VARCHAR(100)  NULL ,
+	FULL_NAME_ND	  VARCHAR(255)  NULL ,
+	ID_Country	  INTEGER  NULL 
+);
+
+
+CREATE TABLE Country
+(
+	ID_Country	  INTEGER  NOT NULL Primary Key Identity(1,1) ,
+	CC_FIPS		  VARCHAR(100)  NULL ,
+	CC_ISO		  VARCHAR(100)  NULL ,
+	TLD		  CHAR(18)  NULL ,
+	COUNTRY_NAME	  VARCHAR(255)  NULL 
+);
+
+
+
+CREATE UNIQUE INDEX XPKCountry ON Country
+(ID_Country  ASC);
+
